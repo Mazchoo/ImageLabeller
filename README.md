@@ -7,7 +7,7 @@ Table of contents
 
 * [Introduction](#introduction)
 * [Requirements and Installation](#requirements-and-installation)
-* [Intro Screen](#introduction-screen)
+* [Introduction Screen](#introduction-screen)
 * [Grid Cell Labelling](#grid-cell-labelling)
 * [Bounding Box Labelling](#bounding-box-labelling)
 * [Polygon Labelling](#polygon-labelling)
@@ -15,11 +15,11 @@ Table of contents
 Introduction
 ------------
 
-A GUI made in Python that can label all images in a folder with different coloured labels. The program supports bounding box labelling, polygon labelling and individual grid-cell labelling.
+This is a GUI Tkinter program made in Python that can label all images in a folder with different coloured labels. The program supports bounding box labelling, polygon labelling and individual grid-cell labelling.
 
 **Python Image Labeller**
 
-* Uses callback events from Matplotlib to label images
+* Uses call back events from Matplotlib to label images
 * Labels can be saved in `.json` format. In the case of generic region labelling, labels can be saved as new images.
 * Supports multiple labels to be added to images with custom colours
 * Allows user to label all images stored in one particular folder
@@ -46,7 +46,7 @@ Select an image the file explorer. You need to select an image in order to start
  
 ![imageSelect](Screenshots/Image_Select.png)
 
-After you have selected the image that you want to label. Select a button on the top bar to select a method for labelling.
+After you have selected the image that you want to label, select a button on the top bar to select a method for labelling.
 
 ![top](Screenshots/Top_Bar.png)
 
@@ -59,18 +59,18 @@ Grid cell labelling will turn the image into a discrete set of square grid cells
 
 ![gridLabel](Screenshots/Grid_Label.png)
 
-To added more labels using the menu on the right. Click the `+New Label` button to add another label colour. When a new label colour is added it will be available to all images in the current folder.
+More labels can be added using the menu on the right. Click the `+New Label` button to add another label colour. When a new label colour is added it will be available to all images in the current folder.
 
 ![newLabel](Screenshots/New_Label.png)
 
-Click on `options` on the very top bar to change the cursor colour to another colour to change the colour of the current label which is being used. You can set your own custom colour by clicking on `Custom` and entring the colour in hex format e.g. `#FFFFFF` corresponds to white. Search for 'Color Picker' on the internet to select a particular colour.
+Click on `options` on the very top bar to change the cursor colour to another colour to change the colour of the current label which is being used. You can set your own custom colour by clicking on `Custom` and enter the colour in hex format e.g. `#FFFFFF` corresponds to white. Search for 'Color Picker' on the internet to select a particular colour.
 
 ![options](Screenshots/Options_Tearoff.png)
 
 Bounding Box Labelling
 ----------------------
 
-Bounding boxes is the fasted way of labelling and has several advantages from a deep learning classification perspective as well. From the into screen, click on the `Bounded Rectangle` button in order to label an image using bounding boxes.
+Bounding boxes is the fasted way of labelling and has several advantages from a deep learning classification perspective as well. From the introduction screen, click on the `Bounded Rectangle` button in order to label an image using bounding boxes.
 
 Each bounding box is defined by clicking two points to define the bounding box. The first click will draw a point and the second will draw a transparent rectangle. The opacity can be controlled by going on `options` and then selecting a percentage of opacity. Now more than two points can exist for a single label colour.
 
@@ -85,7 +85,7 @@ Backing up is automatic when you go to the next image or the previous image. You
 Polygon Labelling
 -----------------
 
-Polygon labelling involves labelling regions by specifing each point. This kind of labelling takes longer to do but can give more granular labelling.
+Polygon labelling involves labelling regions by specifying each point. This kind of labelling takes longer to do but can give more granular labelling.
 
 ![polygonLabel](Screenshots/Polygon_Label.png)
 
