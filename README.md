@@ -11,7 +11,6 @@ Table of contents
 * [Grid Cell Labelling](#grid-cell-labelling)
 * [Bounding Box Labelling](#bounding-box-labelling)
 * [Polygon Labelling](#polygon-labelling)
-* [FAQ](#faq)
 
 Introduction
 ------------
@@ -56,7 +55,7 @@ The size of the measurement grid can also be set on this top bar.
 Grid Cell Labelling
 -------------------
 
-Grid cell labelling will turn the image into a discrete set of square grid cells. Each label can be applied to a grid cell. Left click on the image to label a grid cell and right click to undo the last cell that was labelled. If you want to hide the grid you can click on `options` and set to grid width to `0 px`.
+Grid cell labelling will turn the image into a discrete set of square grid cells. Each label can be applied to a grid cell. Left click on the image to change the label of a grid cell and right click to undo the last cell that was labelled. If you want to hide the grid you can click on `options` and set to grid width to `0 px`.
 
 ![gridLabel](Screenshots/Grid_Label.png)
 
@@ -73,8 +72,23 @@ Bounding Box Labelling
 
 Bounding boxes is the fasted way of labelling and has several advantages from a deep learning classification perspective as well. From the into screen, click on the `Bounded Rectangle` button in order to label an image using bounding boxes.
 
+Each bounding box is defined by clicking two points to define the bounding box. The first click will draw a point and the second will draw a transparent rectangle. The opacity can be controlled by going on `options` and then selecting a percentage of opacity. Now more than two points can exist for a single label colour.
+
 ![boundingBox](Screenshots/Bounding_Box_Label.png)
 
-Use the top bar to navigate to the next image in the folder. When you click `Back up`, you save the label in `.json` format. Backing up is automatic when you go to the next image or the previous image. You can also select a different image from the same folder using the `Browse` button in the bottom right corner.
+Use the top bar to navigate to the next image in the folder. When you click `Back up`, you save the label in `.json` format in the current folder containing the images.
+
+Backing up is automatic when you go to the next image or the previous image. You can also select a different image from the same folder using the `Browse` button in the bottom right corner.
 
 ![boxTopBar](Screenshots/Box_Top_Bar.png)
+
+Polygon Labelling
+-----------------
+
+Polygon labelling involves labelling regions by specifing each point. This kind of labelling takes longer to do but can give more granular labelling.
+
+![polygonLabel](Screenshots/Polygon_Label.png)
+
+To label a region, simply select the label colour and left click to specify points. To remove points in the order they were added right click on the image window. The top bar has some different buttons. As well as storing points in `.json` format, the labels be saved as images. The file extension will be save the same as the original image extension. Clicking on the `Close Region` button will fill in the shape made by the points in the region.
+
+![polygonTopBar](Screenshots/Polygon_Top_Bar.png)
