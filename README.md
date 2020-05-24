@@ -50,3 +50,20 @@ Select an image the file explorer. You need to select an image in order to start
 After you have selected the image that you want to label. Select a button on the top bar to select a method for labelling.
 
 ![top](Screenshots/Top_Bar.png)
+
+The size of the measurement grid can also be set on this top bar.
+
+Grid Cell Labelling
+-------------------
+
+Grid cell labelling will turn the image into a discrete set of square grid cells. Each label can be applied to a grid cell. Left click on the image to label a grid cell and right click to undo the last cell that was labelled. If you want to hide the grid you can click on `options` and set to grid width to `0 px`.
+
+![gridLabel](Screenshots/Grid_Label.png)
+
+To added more labels using the menu on the right. Click the `+New Label` button to add another label colour. When a new label colour is added it will be available to all images in the current folder.
+
+![newLabel](Screenshots/New_Label.png)
+
+Click on `options` on the very top bar to change the cursor colour to another colour to change the colour of the current label which is being used.
+
+![options](Screenshots/Options_Tearoff.png)
