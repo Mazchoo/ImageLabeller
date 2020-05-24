@@ -282,12 +282,6 @@ class SingleCellPage(StartPage):
             command=lambda: self.nextImage(-1), style='TButton'))
         buttons.append(ttk.Button(self,text='Next Image',
             command=lambda: self.nextImage(1), style='TButton'))
-        buttons.append(ttk.Button(self, text='Update CSV',
-            command = lambda: self.saveCSV(n_lines, True,
-            'grid_labels_' + str(self.controller.gridSize)), style='TButton'))
-        buttons.append(ttk.Button(self, text='Save CSV',
-            command = lambda: self.saveCSV(n_lines, False,
-            'grid_labels_' + str(self.controller.gridSize)), style='TButton'))
         buttons.append(ttk.Button(self, text='Go Back',
             command = lambda: self.controller.showFrame(
             StartPage, log='Main menu loading...'), style='TButton'))
@@ -336,12 +330,6 @@ class BoundingBoxPage(StartPage):
             command=lambda: self.nextImage(-1), style='TButton'))
         buttons.append(ttk.Button(self,text='Next Image',
             command=lambda: self.nextImage(1), style='TButton'))
-        buttons.append(ttk.Button(self, text='Update CSV',
-            command = lambda: self.saveCSV(n_lines, True,
-            'grid_labels_' + str(self.controller.gridSize)), style='TButton'))
-        buttons.append(ttk.Button(self, text='Save CSV',
-            command = lambda: self.saveCSV(n_lines, False,
-            'grid_labels_' + str(self.controller.gridSize)), style='TButton'))
         buttons.append(ttk.Button(self, text='Go Back',
             command = lambda: self.controller.showFrame(
             StartPage, log='Main menu loading...'), style='TButton'))
