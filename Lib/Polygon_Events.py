@@ -24,19 +24,6 @@ class PolygonEvents(EventTracker):
         self.drawn_polygons.append(Polygon(np.array([[0,0]], dtype = np.uint16),
             closed=True, color = getEventColor(self, colour_ind)))
 
-    def checkHotkeys(self):
-        if keyboard.is_pressed('q'):
-            self.frame.back_up(); return
-        if keyboard.is_pressed('w'):
-            self.frame.next_image(-1); return
-        if keyboard.is_pressed('s'):
-            self.frame.next_image(1); return
-        if keyboard.is_pressed('a'):
-            self.controller.offsetLabel(-1); return
-        if keyboard.is_pressed('d'):
-            self.controller.offsetLabel(1); return
-        return False
-
     def cursorEvent(self, event):
         x = np.uint16(np.floor(event.xdata))
         y = np.uint16(np.floor(event.ydata))

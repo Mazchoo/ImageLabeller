@@ -266,8 +266,12 @@ class StartPage(tk.Frame):
         f_handle.write(line)
         f_handle.close()
 
-    def getSaveDictionaryName(self):
-        return 'error'
+    def selectConsectiveLabel(self, offset):
+        self.colour_bar.selectConsectiveLabel(offset)
+
+    def getSaveDictionaryName(self): # Virtual function
+        print('Virtual method getSaveDictionary name has been called.')
+        return
 
 class SingleCellPage(StartPage):
 

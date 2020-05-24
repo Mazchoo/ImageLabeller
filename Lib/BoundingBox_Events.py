@@ -17,19 +17,6 @@ class BoundingBoxEvents(EventTracker):
         self.labels.append(np.ndarray((2,2), dtype = np.uint16))
         self.labels[-1].fill(0)
 
-    def checkHotkeys(self):
-        if keyboard.is_pressed('q'):
-            self.frame.back_up(); return
-        if keyboard.is_pressed('w'):
-            self.frame.next_image(-1); return
-        if keyboard.is_pressed('s'):
-            self.frame.next_image(1); return
-        if keyboard.is_pressed('a'):
-            self.controller.offsetLabel(-1); return
-        if keyboard.is_pressed('d'):
-            self.controller.offsetLabel(1); return
-        return False
-
     def addFirstPoint(self, x, y):
         self.addCircle(x, y)
         self.labels[self.c_index][0,0] = x

@@ -177,5 +177,18 @@ class EventTracker:
         self.ys.append([])
         self.circs.append([])
 
+    def checkHotkeys(self):
+        if keyboard.is_pressed('q'):
+            self.frame.makeBackup(); return
+        if keyboard.is_pressed('w'):
+            self.frame.nextImage(-1); return
+        if keyboard.is_pressed('s'):
+            self.frame.nextImage(1); return
+        if keyboard.is_pressed('a'):
+            self.frame.selectConsectiveLabel(-1); return
+        if keyboard.is_pressed('d'):
+            self.frame.selectConsectiveLabel(1); return
+        return False
+
     def clear(self):
         self.fig.canvas.mpl_disconnect(self.event_interface)

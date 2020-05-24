@@ -294,9 +294,6 @@ class MainWindow(tk.Tk):
         self.current_frame.events.addNewLine()
         self.current_frame.events.addNewLabel()
 
-    def offsetLabel(self, offset):
-        self.current_frame.color_bar.selectConsectiveLabel(offset)
-
     def exit(self):
         self.quit()
         self.destroy()

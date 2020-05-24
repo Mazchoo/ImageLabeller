@@ -19,19 +19,6 @@ class GridEvents(EventTracker):
         self.labels.append(np.ndarray((self.height_cells, self.width_cells), dtype=np.bool))
         self.labels[-1].fill(False)
 
-    def checkHotkeys(self):
-        if keyboard.is_pressed('q'):
-            self.frame.back_up(); return
-        if keyboard.is_pressed('w'):
-            self.frame.next_image(-1); return
-        if keyboard.is_pressed('s'):
-            self.frame.next_image(1); return
-        if keyboard.is_pressed('a'):
-            self.controller.offsetLabel(-1); return
-        if keyboard.is_pressed('d'):
-            self.controller.offsetLabel(1); return
-        return False
-
     def updateLineData(self):
         self.lines[self.c_index].set_data(self.xs[self.c_index], self.ys[self.c_index])
 
