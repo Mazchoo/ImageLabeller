@@ -11,6 +11,7 @@ Table of contents
 * [Grid Cell Labelling](#grid-cell-labelling)
 * [Bounding Box Labelling](#bounding-box-labelling)
 * [Polygon Labelling](#polygon-labelling)
+* [Hot Keys](#hot-keys)
 
 Introduction
 ------------
@@ -92,3 +93,18 @@ Polygon labelling involves labelling regions by specifying each point. This kind
 To label a region, simply select the label colour and left click to specify points. To remove points in the order they were added right click on the image window. The top bar has some different buttons. As well as storing points in `.json` format, the labels be saved as images. The file extension will be save the same as the original image extension. Clicking on the `Close Region` button will fill in the shape made by the points in the region.
 
 ![polygonTopBar](Screenshots/Polygon_Top_Bar.png)
+
+Hot Keys
+--------
+
+To activate a hotkey simply hold down the desired hot key and click on the image window outside the image canvas. A table of hot keys with their effects is given below.
+
+| Hot key | Effect                                         |
+| ------- | ----------------------------------------------:|
+| `q`     | Backs up the current labels as .json.*         |
+| `w`     | Go to the previous image in the current folder.|
+| `s`     | Go to the next image in the current folder.    |
+| `a`     | Go to the previous label in colour label menu. |
+| `d`     | Go to the next label in the colour label menu, |
+
+* backing up is done automatically when the image is changed
