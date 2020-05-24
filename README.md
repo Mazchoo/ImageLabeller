@@ -7,7 +7,7 @@ Table of contents
 
 * [Introduction](#introduction)
 * [Requirements and Installation](#requirements-and-installation)
-* [Intro Screen](#into-screen)
+* [Intro Screen](#introduction-screen)
 * [Grid Cell Labelling](#grid-cell-labelling)
 * [Bounding Box Labelling](#bounding-box-labelling)
 * [Polygon Labelling](#polygon-labelling)
@@ -35,8 +35,8 @@ The following packages are required and were tested with the following versions:
 
 Clone the repository into a folder and run `Image Labeller.py` in a Python kernel. I.e. `python ImageLabeller.py` in the command line.
 
-Intro Screen
-------------
+Introduction Screen
+-------------------
 
 The intro screen can be used to load an image for labelling. Click on the `Browse` button in the bottom right corner.
 
