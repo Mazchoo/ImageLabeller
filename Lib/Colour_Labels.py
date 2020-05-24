@@ -79,7 +79,6 @@ class ColourSelect(tk.Frame):
         self.radio_buttons[value].select()
         self.controller.setLabelIndex(value)
         self.controller.setCursorColour(self.colour_list[value])
-        #print('Label', self.current_index, 'is now selected.')
 
     def getMetaDictionary(self):
         meta_dict = {}

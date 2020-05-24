@@ -39,7 +39,7 @@ class MainWindow(tk.Tk):
 
     def setupWindow(self):
         tk.Tk.iconbitmap(self, default=cwd+'Graphics/Icon.ico')
-        tk.Tk.wm_title(self, 'Grid Image Labeller')
+        tk.Tk.wm_title(self, 'Python Image Labeller')
         ttk.Style().configure('TButton', padding=6, relief='flat',
             background='#000', font=BUTTON_FONT)
 
