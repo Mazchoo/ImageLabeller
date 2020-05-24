@@ -21,7 +21,7 @@ A GUI made in Python that can label all images in a folder with different colour
 **Python Image Labeller**
 
 * Uses callback events from Matplotlib to label images
-* Labels can be saved in .json format or in csv format. In the case of generic region labelling, labels can be saved as new images.
+* Labels can be saved in `.json` format. In the case of generic region labelling, labels can be saved as new images.
 * Supports multiple labels to be added to images with custom colours
 * Allows user to label all images stored in one particular folder
 * Options to adjust colour and size of measurement grid#
@@ -32,7 +32,7 @@ Requirements and Installation
 The following packages are required and were tested with the following versions:
 
 * Matplotlib version 3.2.1
-* keyboard 0.13.4
+* keyboard version 0.13.4
 
 Clone the repository into a folder and run `Image Labeller.py` in a Python kernel. I.e. `python ImageLabeller.py` in the command line.
 
@@ -64,6 +64,17 @@ To added more labels using the menu on the right. Click the `+New Label` button 
 
 ![newLabel](Screenshots/New_Label.png)
 
-Click on `options` on the very top bar to change the cursor colour to another colour to change the colour of the current label which is being used.
+Click on `options` on the very top bar to change the cursor colour to another colour to change the colour of the current label which is being used. You can set your own custom colour by clicking on `Custom` and entring the colour in hex format e.g. `#FFFFFF` corresponds to white. Search for 'Color Picker' on the internet to select a particular colour.
 
 ![options](Screenshots/Options_Tearoff.png)
+
+Bounding Box Labelling
+----------------------
+
+Bounding boxes is the fasted way of labelling and has several advantages from a deep learning classification perspective as well. From the into screen, click on the `Bounded Rectangle` button in order to label an image using bounding boxes.
+
+![boundingBox](Screenshots/Bounding_Box_Label.png)
+
+Use the top bar to navigate to the next image in the folder. When you click `Back up`, you save the label in `.json` format. Backing up is automatic when you go to the next image or the previous image. You can also select a different image from the same folder using the `Browse` button in the bottom right corner.
+
+![boxTopBar](Screenshots/Box_Top_Bar.png)
