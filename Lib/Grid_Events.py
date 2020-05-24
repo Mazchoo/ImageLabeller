@@ -2,12 +2,7 @@ import numpy as np
 import keyboard, sys
 from matplotlib.patches import Circle, Rectangle
 
-cwd = sys.path[0]
-if len(cwd) == 0:
-    cwd = 'C:/Users/berta/Desktop/Python/Image Labeller/'
-    sys.path.append(cwd)
-else:
-    cwd += '/'
+cwd = sys.path[0] + '/'
 
 from Lib.Event_Register import *
 from Lib.Utility_Functions import *

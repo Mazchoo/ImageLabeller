@@ -4,12 +4,7 @@ from tkinter import filedialog
 from pathlib import Path
 import sys
 
-cwd = sys.path[0]
-if len(cwd) == 0:
-    cwd = 'C:/Users/berta/Desktop/Python/Image Labeller/'
-    sys.path.append(cwd)
-else:
-    cwd += '/'
+cwd = sys.path[0] + '/'
 
 from Lib.Utility_Functions import *
 
