@@ -97,7 +97,7 @@ To label a region, simply select the label colour and left click to specify poin
 Hot Keys
 --------
 
-To activate a hotkey simply hold down the desired hot key and click on the image window outside the image canvas. A table of hot keys with their effects is given below.
+To activate a hotkey simply hold down the desired hot key and **click on the image window**. Clicking on the image window outside the image canvas will not change the labels. A table of hot keys with their effects is given below.
 
 | Hot key | Effect                                         |
 | ------- | ----------------------------------------------:|
@@ -107,4 +107,4 @@ To activate a hotkey simply hold down the desired hot key and click on the image
 | `a`     | Go to the previous label in colour label menu. |
 | `d`     | Go to the next label in the colour label menu, |
 
-* backing up is done automatically when the image is changed
+\* backing up is done automatically when the image is changed
