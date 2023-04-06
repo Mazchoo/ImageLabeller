@@ -29,7 +29,7 @@ This is a GUI Tkinter program made in Python that can label all images in a fold
 Requirements and Installation
 -----------------------------
 
-The following packages are required and were tested with the following versions:
+The following packages are required and were tested with the following versions (see requirements.txt):
 
 * Matplotlib version 3.2.1
 * keyboard version 0.13.4

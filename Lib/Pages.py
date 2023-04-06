@@ -1,24 +1,30 @@
 import tkinter as tk
 from tkinter import ttk
-import sys, json
+import sys
+import json
+import numpy as np
+from pathlib import Path
+
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib import pyplot as plt
-import numpy as np
-from matplotlib import use; use('TkAgg')
-from matplotlib import style; style.use('dark_background')
-from pathlib import Path
+from matplotlib import use
+from matplotlib import style
 from os import listdir
 from os.path import isfile, join
 
-cwd = sys.path[0] + '/'
-
-from Lib.File_Selection import *
+from Lib.File_Selection import FileSelect
 from Lib.Colour_Labels import *
 from Lib.Event_Register import *
 from Lib.BoundingBox_Events import *
 from Lib.Polygon_Events import *
 from Lib.Grid_Events import *
+
+use('TkAgg')
+style.use('dark_background')
+
+cwd = sys.path[0] + '/'
+
 
 class StartPage(tk.Frame):
 
@@ -100,10 +106,10 @@ class StartPage(tk.Frame):
         buttons.append(ttk.Button(self, text='Single Cell',
             command=lambda: self.controller.showFrame(
             SingleCellPage, log='Single Cell running...'), style='TButton'))
-        buttons.append(ttk.Button(self,text='Bounded Rectangle',
+        buttons.append(ttk.Button(self, text='Bounded Rectangle',
             command=lambda: self.controller.showFrame(
             BoundingBoxPage, log='Bounded Rectangle running...'), style='TButton'))
-        buttons.append(ttk.Button(self,text='Bounded Region',
+        buttons.append(ttk.Button(self, text='Bounded Region',
             command=lambda: self.controller.showFrame(
             PolygonRegionPage, log='Bounded Region running...'), style='TButton'))
         grid_entry = tk.Entry(self, justify='center', font=LARGE_FONT, width=6, bd=5)
@@ -137,16 +143,19 @@ class StartPage(tk.Frame):
         self.axes.autoscale(enable=False)
         im_h, im_w = len(self.image), len(self.image[0])
         gs = self.controller.gridSize
-        for i in range(len(self.gridlines)):
+
+        for _ in range(len(self.gridlines)):
             line = self.gridlines.pop(-1)
             line.remove()
-        for i in np.arange(0,im_h-np.mod(im_h, gs),step=gs):
-            line = self.axes.plot((0,im_w-1), (i,i), '--',
-                linewidth=self.grid_weight, color=self.grid_col)[0]
+
+        for i in np.arange(0, im_h - np.mod(im_h, gs), step=gs):
+            line = self.axes.plot((0, im_w - 1), (i, i), '--',
+                                  linewidth=self.grid_weight, color=self.grid_col)[0]
             self.gridlines.append(line)
-        for i in np.arange(0,im_w-np.mod(im_w, gs),step=gs):
-            line =  self.axes.plot((i,i), (0,im_h-1), '--',
-                linewidth=self.grid_weight, color=self.grid_col)[0]
+
+        for i in np.arange(0, im_w - np.mod(im_w, gs), step=gs):
+            line = self.axes.plot((i, i), (0, im_h - 1), '--',
+                                  linewidth=self.grid_weight, color=self.grid_col)[0]
             self.gridlines.append(line)
         line.figure.canvas.draw()
         self.axes.autoscale(enable=True)
